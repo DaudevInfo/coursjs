@@ -1,0 +1,12 @@
+const startTimer = (nb) => {
+    let i = 0
+    while(i<nb) {
+        setTimeout (() =>{ console.log("Chronomètre :"+ i)
+        }      
+        ,1000)
+        i++ 
+    }
+    console.log("Temps écoulé !" )
+} 
+
+startTimer(10)
