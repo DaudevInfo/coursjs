@@ -1,8 +1,9 @@
 const prompt = require("prompt-sync")({sigint : true})
 
 
-const nbToFind = Math.round(Math.random()*100)
+const nbToFind = Math.round(Math.random()*99)+1
 console.log("Debug resultat à trouver :" + nbToFind)
+
 let nb = null;
 let i = 1;
 while (nb != nbToFind || i >5)
