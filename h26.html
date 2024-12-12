@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP Canvas</title>
+</head>
+<body>
+    <h1>Canvas</h1>
+    <canvas id="drawingCanvas" width="500" height="500" style="background-color: blanchedalmond"></canvas>
+
+    <script>
+        const canvas = document.querySelector('Canvas');
+        const context = canvas.getContext('2d');
+
+        //document.querySelector('Canvas').addEventListener('mousedown', function(event) {
+        //    context.beginPath();  
+        //});
+        document.querySelector('Canvas').addEventListener('mousemove', function(event) {
+            context.lineTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+            context.stroke();
+        });
+        //document.querySelector('Canvas').addEventListener('mouseup', function(event) {
+   
+        //     context.ClosePath();
+        //     context.stroke();
+        //     context.fill();
+        // });
+        
+    </script>
+</body>
+</html>

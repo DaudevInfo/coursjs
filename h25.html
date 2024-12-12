@@ -7,18 +7,13 @@
 </head>
 <script>
     changecolor = (color) => {
-        event.preventDefault();
         document.body.style.backgroundColor = color;
     }
 </script>
 <body>
-    <form >        
-        <button onclick="changecolor('#FF0000')" style="background-color: red;">RED</button>
-        <button onclick="changecolor('#0000FF')" style="background-color: blue;">BLUE</button>
-        <button onclick="changecolor('#FFFFFF')" style="background-color: white;">WHITE</button>
-    </form>
-   
-    
+    <button onclick="changecolor('red')" style="background-color: red;">RED</button>
+    <button onclick="changecolor('blue')" style="background-color: blue;">BLUE</button>
+    <button onclick="changecolor('white')" style="background-color: white;">WHITE</button> 
 </body>
 
 </html>
