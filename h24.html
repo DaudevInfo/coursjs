@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice</title>
+</head>
+<script>
+
+    function addIdea() {
+        event.preventDefault();
+        let idea = document.getElementById('idea').value;
+        let ul = document.querySelector('ul');
+        let li = document.createElement('li');
+        li.appendChild(document.createTextNode(idea))
+
+        let button = document.createElement('button');
+        button.innerHTML = 'Delete Idea';
+        button.setAttribute('onclick', 'deleteIdea(event)');
+        let img = document.createElement('img');
+        img.src = './img/trash.png'; 
+        img.alt = 'Delete Idea';
+        img.style.width = '20px';
+
+        button.appendChild(img);
+        li.appendChild(button);
+        
+        ul.appendChild(li);
+        document.body.appendChild(ul);
+    }
+    function deleteIdea(event) {
+        event.preventDefault();
+        let button = event.target;
+        let li = button.parentNode;
+        li.parentNode.removeChild(li);
+    }
+</script>
+<body>
+    <form >        
+        <label for="idea">Idea:</label>
+        <input type="text" id="idea" ><br>
+        <button onclick="addIdea()">Add Idea</button>
+        
+    </form>
+    <ul>
+        <p>My Ideas:</p>    
+    </ul>
+    
+</body>
+
+</html>

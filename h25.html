@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice</title>
+</head>
+<script>
+    changecolor = (color) => {
+        event.preventDefault();
+        document.body.style.backgroundColor = color;
+    }
+</script>
+<body>
+    <form >        
+        <button onclick="changecolor('#FF0000')" style="background-color: red;">RED</button>
+        <button onclick="changecolor('#0000FF')" style="background-color: blue;">BLUE</button>
+        <button onclick="changecolor('#FFFFFF')" style="background-color: white;">WHITE</button>
+    </form>
+   
+    
+</body>
+
+</html>
